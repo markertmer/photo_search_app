@@ -1,0 +1,13 @@
+<h1>Image Results</h1>
+
+<% @images.each do |image| %>
+  <img src=<%= image %>>
+<% end %>
+
+<h2>Search Again</h2>
+
+<%= form_with url: "/images", method: :post, local: true do |f| %>
+  <%= f.label :keyword %>
+  <%= f.text_field :keyword %>
+  <%= f.submit "SEARCH" %>
+<% end %>
